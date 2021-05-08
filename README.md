@@ -1,3 +1,12 @@
-# My name is Ahuiya Osiri. I am a finance professional
-I want to be a Fintech specialist
-To add the technical side to my career
+# **Title** 
+![picture](a.jpg)
+---
+# *Description*
+---
+# *Table of Contents*
+```python
+```
+[code](code)
+[references](references)
+[data](data)
+[images](images)
