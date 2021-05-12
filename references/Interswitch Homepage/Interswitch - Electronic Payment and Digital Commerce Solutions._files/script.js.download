@@ -1,0 +1,140 @@
+$(document).ready(function () {
+    "use strict";
+    $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+    $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+    $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\">&nbsp;</a>");
+    $(".menu > ul > li").hover(function (e) {
+        if ($(window).width() > 943) {
+            $(this).children("ul").stop(true, false).fadeToggle(150);
+            e.preventDefault();
+        }
+    });
+    $(".menu > ul > li").click(function () {
+        if ($(window).width() <= 943) {
+            $(this).children("ul").fadeToggle(150);
+        }
+    });
+    $(".menu-mobile").click(function (e) {
+        $(".menu > ul").toggleClass('show-on-mobile');
+        e.preventDefault();
+    });
+
+
+    $('.thumbnail').mouseover(function () {
+        $('#' + $(this).attr('value')).show();
+    }).mouseout(function () {
+        $('#' + $(this).attr('value')).hide();
+    })
+
+    $("#shareSocial").jsSocials({
+        showLabel: false,
+        showCount: "inside",
+        shares: ["twitter", "facebook", "email", "whatsapp", "linkedin", "pinterest"]
+    });
+
+    // const userAgent = navigator.userAgent;
+    // if (/android/i.test(userAgent)) {
+    //     $(".android_iphone").html("<a href='https://play.google.com/store/apps/details?id=com.interswitchgroup.vervelife&hl=en'><img src='../images/consumer/Button-Android.svg' class='img-fluid' alt='Responsive image'></a>");
+    // }
+    // else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+    //     $(".android_iphone").html("<a href='https://apps.apple.com/ng/app/verve-life/id1474774751'><img src='../assets/images/consumer/Button-App-Store.svg' class='img-fluid' alt='Responsive image'></a>");
+    // } else {
+    //     alert("hello")
+    //     $(".android_iphone").html("<a href='#'><img src='../images/consumer/Button-App-Store.svg' class='img-fluid' alt='Responsive image'></a> <a href='#'><img src='../images/consumer/Button-App-Store.svg' class='img-fluid padding-right-qt' alt='Responsive image'></a>");
+    // }
+    // $(".android_iphone").text("<a href='#'><img src='../images/consumer/Button-App-Store.svg' class='img-fluid' alt='Responsive image'></a> <a href='#'><img src='../images/consumer/Button-App-Store.svg' class='img-fluid padding-right-qt' alt='Responsive image'></a>");
+});
+$(window).resize(function () {
+    $(".menu > ul > li").children("ul").hide();
+    $(".menu > ul").removeClass('show-on-mobile');
+});
+
+$(function () {
+    $('.video-popup').magnificPopup({
+        type: 'iframe'
+    });
+    $('.image-popup').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+})
+
+$(function () {
+
+    var swiper = new Swiper('.carousel-gallery .swiper-container', {
+        effect: 'slide',
+        speed: 900,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        simulateTouch: true,
+        autoplay: {
+            delay: 5000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: '.carousel-gallery .swiper-pagination',
+            clickable: true
+        },
+        breakpoints: {
+            // when window width is <= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 5
+            },
+            // when window width is <= 480px
+            425: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            // when window width is <= 640px
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
+    }); /*http://idangero.us/swiper/api/*/
+
+
+
+});
+function quicktellerApp() {
+    const userAgent = navigator.userAgent;
+    if (/android/i.test(userAgent)) {
+        $(".android_iphone").html("<a href='https://play.google.com/store/apps/details?id=com.quickteller.app&hl=en'><img src='assets/images/consumer/Button-Android.svg' class='img-fluid' alt='Responsive image'></a>");
+    }
+    else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+        $(".android_iphone").html("<a href='https://apps.apple.com/ng/app/quickteller-payments-wallet/id1451802854'><img src='assets/images/consumer/Button-App-Store.svg' class='img-fluid' alt='Responsive image'></a>");
+    } else {
+        $(".android_iphone").html("<a href='https://play.google.com/store/apps/details?id=com.quickteller.app&hl=en'><img src='assets/images/consumer/Button-Android.svg' class='img-fluid' alt='Responsive image'></a> <a href='https://apps.apple.com/ng/app/quickteller-payments-wallet/id1451802854'><img src='assets/images/consumer/Button-App-Store.svg' class='img-fluid padding-right-qt' alt='Responsive image'></a>");
+    }
+};
+quicktellerApp();
+
+function quicktellerMall() {
+    const userAgent = navigator.userAgent;
+    if (/android/i.test(userAgent)) {
+        $(".android_iphone_mall").html("<a href='https://play.google.com/store/apps/details?id=com.Global_mall.quickteller&hl=en'><img src='assets/images/consumer/Button-Android.svg' class='img-fluid' alt='Responsive image'></a>");
+    }
+    else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+        $(".android_iphone_mall").html("<a href='https://apps.apple.com/ng/app/quickteller-globalmall/id1446751480'><img src='assets/images/consumer/Button-App-Store.svg' class='img-fluid' alt='Responsive image'></a>");
+    } else {
+        $(".android_iphone_mall").html("<a href='https://play.google.com/store/apps/details?id=com.Global_mall.quickteller&hl=en'><img src='assets/images/consumer/Button-Android.svg' class='img-fluid' alt='Responsive image'></a> <a href='https://apps.apple.com/ng/app/quickteller-globalmall/id1446751480'><img src='assets/images/consumer/Button-App-Store.svg' class='img-fluid padding-right-qt' alt='Responsive image'></a>");
+    }
+};
+quicktellerMall();
+
+// function verveLife() {
+//     const userAgent = navigator.userAgent;
+//     if (/android/i.test(userAgent)) {
+//         $(".android_iphone").html("<a href='https://play.google.com/store/apps/details?id=com.interswitchgroup.vervelife&hl=en'><img src='assets/images/consumer/Button-Android.svg' class='img-fluid' alt='Responsive image'></a>");
+//     }
+//     else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+//         $(".android_iphone").html("<a href='https://apps.apple.com/ng/app/verve-life/id1474774751'><img src='assets/images/consumer/Button-App-Store.svg' class='img-fluid' alt='Responsive image'></a>");
+//     } else {
+//         $(".android_iphone").html("<a href='https://play.google.com/store/apps/details?id=com.interswitchgroup.vervelife&hl=en'><img src='assets/images/consumer/Button-Android.svg' class='img-fluid' alt='Responsive image'></a> <a href='https://apps.apple.com/ng/app/verve-life/id1474774751'><img src='assets/images/consumer/Button-App-Store.svg' class='img-fluid padding-right-qt' alt='Responsive image'></a>");
+//     }
+// };
+// verveLife();

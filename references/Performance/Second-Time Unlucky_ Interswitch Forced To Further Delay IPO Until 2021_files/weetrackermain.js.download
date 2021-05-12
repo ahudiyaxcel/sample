@@ -1,0 +1,54 @@
+(function($) {
+  "use strict"; // Start of use strict
+    $(".modal").on('hidden.bs.modal', function (e) {
+        $(".modal video").attr("src", $(".modal video").attr("src"));
+    });
+
+/*  // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#sticky-title',
+    offset: 10
+  });
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if ($("#sticky-title").offset().top > 100) {
+      $("#sticky-title").addClass("sticky-title");
+    } else {
+      $("#sticky-title").removeClass("sticky-title");
+    }
+  };*/
+
+/*  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
+
+ })(jQuery); // End of use strict*/
+
+
+// START WPMM PLUGIN JQUERY
+jQuery(document).ready(function($){'use strict';
+
+  var clr = '';
+  var clr_bg = '';
+  $(".wpmm-featurebox-hcolor").on({
+      mouseenter: function () {
+        clr = $(this).css('color');
+      clr_bg = $(this).css('backgroundColor');
+      $(this).css("color", $(this).data("hover-color"));
+      $(this).css("background-color", $(this).data("hover-bg-color"));
+      },
+      mouseleave: function () {
+          $(this).css("color", clr );
+      $(this).css("background-color", clr_bg );
+      }
+  });
+}); 
+});
+// END WPMM PLUGIN JQUERY
+
+
+// CUSTOM JQUERY SHOULD START FROM HERE.
+
+
