@@ -1,5 +1,0 @@
-(function($){$(document).ready(function(){$(".navbarprimary .dropdowntoggle").click(function(){if($(this).parent('li').hasClass('navbarprimary-open')){$(this).parent('li').removeClass('navbarprimary-open');}else{$(this).parent('li').addClass('navbarprimary-open');}
-if($(this).children('a').children('span').hasClass('fa-chevron-circle-down')){$(this).children('a').children('span').removeClass('fa-chevron-circle-down');$(this).children('a').children('span').addClass('fa-chevron-circle-right');}else{$(this).children('a').children('span').removeClass('fa-chevron-circle-right');$(this).children('a').children('span').addClass('fa-chevron-circle-down');}
-return false;});var links=$('.navbarprimary .navbar-collapse a');for(i=0,len=links.length;i<len;i++){links[i].addEventListener('focus',toggleFocus,true);links[i].addEventListener('blur',toggleFocus,true);}
-function toggleFocus(){var self=this;while(-1===self.className.indexOf('navbar-nav')){if('li'===self.tagName.toLowerCase()){if(-1!==self.className.indexOf('focus')){self.className=self.className.replace(' focus','');}else{self.className+=' focus';}}
-self=self.parentElement;}}});})(jQuery);

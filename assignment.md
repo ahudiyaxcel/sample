@@ -29,12 +29,8 @@ With the rise of cryptocurrency, I believe Interswitch can function as a Crypto 
 ## Addendum
 ```python
 ```
-[Interswitch](Interswitch_Hompage)
+[code](code)
 
-[Fintech](Fintech_History)
+[data](data)
 
-[Helios](Helios_investment)
-
-[Performance](Performance)
-
-[Ranking](Ranking)
+[images](images)
